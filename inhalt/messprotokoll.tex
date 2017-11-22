@@ -1,0 +1,91 @@
+\section{Messprotokoll}
+\label{sec:messprotokoll}
+\pagestyle{messprotokoll}
+
+
+%======================================%
+%================Inhalt================%
+\begin{tabelle}
+	\caption{Temperatur}
+	\label{tab:messprotokoll->parameter}
+	\begin{tabular}{|c|K{3.5\tablewidth}|K{3.5\tablewidth}|}
+		\hline \rowcolor{firstcsvrow}
+		Parameter & vor Versuchsdurchführung & nach Versuchsdurchführung \\ \hline
+		Temperatur in $\grad C$ && \\\hline
+		Luftdruck in $hPa$ && \\\hline
+	\end{tabular}
+\end{tabelle}
+
+
+\subsection{Kennlinie und Wirkungsgrad der Elektrolysezelle}
+\label{sub:messprotokoll->elektrolysezelle}
+
+\begin{tabelle}
+	\caption{Faraday-Wirkungsgrad der Elektrolysezelle}
+	\label{tab:messprotokoll->Elektrolyse->Wirkungsgrad}
+	\begin{tabular}{|c|K{2.5\tablewidth}|K{2.5\tablewidth}|}
+		\hline \rowcolor{firstcsvrow}
+		Messung & $I$ in $A$ & $T(\Delta V=20~ml)$ in $s$ \\ \hline
+		\leereZellen{3}{\csvcoli & &}
+	\end{tabular}
+\end{tabelle}
+
+%Der Elektrolysestrom wurde auf \rule[-2pt]{1.2cm}{1pt} $A$ eingestellt. Innerhalb von \rule[-2pt]{1.2cm}{1pt} $s$ ist das Wasserstoffvolumen um $20~ml$ gestiegen.
+
+\begin{tabelle}
+	\caption{Strom-Spannungs-Kennlinie der Elektrolysezelle}
+	\label{tab:messprotokoll->Elektrolysezelle->Kennlinie}
+	\begin{tabular}{|c|K{2.5\tablewidth}|K{2.5\tablewidth}|}
+		\hline \rowcolor{firstcsvrow}
+		Messwert & $I$ in $A$ & $U$ in $V$ \\ \hline
+		\leereZellen{30}{\csvcoli & &}
+	\end{tabular}
+\end{tabelle}
+Zusätzliche Bemerkungen:
+\linie{2}
+
+
+\subsection{Kennlinie und Wirkungsgrad der Brennstoffzellen}
+\label{sub:messprotokoll->brennstoffzelle}
+\begin{tabelle}
+	\caption{Nullmessung der Brennstoffzelle}
+	\label{tab:messprotokoll->Brennstoffzelle->Nullmessung}
+	\begin{tabular}{|c|K{2.5\tablewidth}|K{2.5\tablewidth}|}
+		\hline \rowcolor{firstcsvrow}
+		$\Delta V$ in $ml$ & $T$ in $s$ \\ \hline
+		$2$ & \\ \hline
+		$4$ & \\ \hline
+		$6$ & \\ \hline
+	\end{tabular}
+\end{tabelle}
+
+\begin{tabelle}
+	\caption{Strom-Spannungskennlinie der Brennstoffzelle}
+	\label{tab:messprotokoll->Brennstoffzelle->Kennlinie}
+	\begin{tabular}{|c|K{1.5\tablewidth}|K{1.5\tablewidth}|K{1.5\tablewidth}|K{1.5\tablewidth}|}
+		\hline \rowcolor{firstcsvrow}
+		Messwert & $I$ in $A$ & $R_{Last}$ in $\Omega$ & $U_{ges}$ in $V$ & $U_{uBZ}$ in $V$ \\ \hline
+		\leereZellen{30}{\csvcoli &&&&}
+	\end{tabular}
+\end{tabelle}
+
+
+\begin{tabelle}
+	\caption{Strom-Spannungskennlinie der Brennstoffzelle (3-fache Durchführung)}
+	\label{tab:messprotokoll->brennstoffzelle}
+	\begin{tabular}{|K{\tablewidth}|K{\tablewidth}|l|K{\tablewidth}|K{\tablewidth}|r|K{\tablewidth}|K{\tablewidth}|}
+		\cline {1-2}\cline {4-5}\cline {7-8}
+		\multicolumn{2}{|c|}{\cellcolor{firstcsvrow} Messung 1} &~~~~~~& \multicolumn{2}{|c|}{\cellcolor{firstcsvrow} Messung 2} &~~~~~~& \multicolumn{2}{|c|}{\cellcolor{firstcsvrow} Messung 2} \\
+		\cline {1-2}\cline {4-5}\cline {7-8}
+		\cellcolor{secondcsvrow} $I$ in $A$ & \cellcolor{secondcsvrow} $U$ in $V$ &  &\cellcolor{secondcsvrow} $I$ in $A$ & \cellcolor{secondcsvrow} $U$ in $V$ &  & \cellcolor{secondcsvrow} $I$ in $A$ & \cellcolor{secondcsvrow} $U$ in $V$ \\
+		\cline {1-2}\cline {4-5}\cline {7-8}
+		\csvreader[separator=semicolon, late after line=\\\cline {1-2}\cline {4-5}\cline {7-8}, filter test=\ifnumless{\csvcoli}{44}]{./tables/hundert.csv}{}
+			{& &  & & &  & &}
+	\end{tabular}
+\end{tabelle}
+Zusätzliche Bemerkungen:
+\linie{2}
+
+
+\newpage
+\kariert{47}

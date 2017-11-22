@@ -1,0 +1,46 @@
+\documentclass{./setup/class} %Dokumentenart
+
+
+%Pakete und Erweiterungen
+\input{setup/packages}
+%Eigene Bibliothek
+\input{./setup/commands}
+%Dokumentendaten
+
+\renewcommand{\labor}{Physik} %Laborname
+\renewcommand{\versuch}{E2} %Versuchnummer
+\renewcommand{\versuchtitel}{Kennlinien und Wirkungsgrade von Brennstoffzellen} %Versuchtitel
+\renewcommand{\betreuer}{Frau Dr. Nicolaus} %Versuchtitel
+\renewcommand{\datum}{31. November 2017} %Datum
+\author{Marius Neumann \and \&  \and Nico Herkner}
+
+%Literaturveichnis
+\bibliographystyle{babplain-lf}
+\begin{document}
+\newgeometry{includehead, ignorefoot, bindingoffset=10mm, top=17mm, left=17mm, right=17mm, bottom=17mm}
+\maketitle
+\tableofcontents
+\thispagestyle{titelseite}
+\setcounter{page}{0}
+\restoregeometry
+%======================================%
+%================Inhalt================%
+\input{inhalt/theorie}
+\input{inhalt/vorbereitung}
+\input{inhalt/durchfuehrung}
+	\newpage
+\input{inhalt/auswertung}
+	\newpage
+\input{inhalt/geraeteliste}
+%Literatur- und Abkürzungsverzeichnis 	
+\def\usecounter#1{\@nmbrlisttrue\def\@listctr{#1}\setcounter{#1}{0}}
+\bibliography{bib/s4}
+%\addcontentsline{toc}{section}{Literatur}
+\section*{Anhang}
+\addcontentsline{toc}{section}{Anhang}
+%\setcounter{section}{0}
+%Messprotokoll
+\label{letzteSeite}
+\include{inhalt/messprotokoll}
+%\include{inhalt/stichpunkte}
+\end{document}
