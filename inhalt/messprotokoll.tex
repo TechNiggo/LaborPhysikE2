@@ -5,6 +5,7 @@
 
 %======================================%
 %================Inhalt================%
+\vspace{-0.5cm}
 \begin{tabelle}
 	\caption{Temperatur}
 	\label{tab:messprotokoll->parameter}
@@ -20,6 +21,7 @@
 \subsection{Kennlinie und Wirkungsgrad der Elektrolysezelle}
 \label{sub:messprotokoll->elektrolysezelle}
 
+\vspace{-0.5cm}
 \begin{tabelle}
 	\caption{Faraday-Wirkungsgrad der Elektrolysezelle}
 	\label{tab:messprotokoll->Elektrolyse->Wirkungsgrad}
@@ -32,21 +34,23 @@
 
 %Der Elektrolysestrom wurde auf \rule[-2pt]{1.2cm}{1pt} $A$ eingestellt. Innerhalb von \rule[-2pt]{1.2cm}{1pt} $s$ ist das Wasserstoffvolumen um $20~ml$ gestiegen.
  
+\vspace{-0.5cm}
 \begin{tabelle}
 	\caption{Strom-Spannungs-Kennlinie der Elektrolysezelle}
 	\label{tab:messprotokoll->Elektrolysezelle->Kennlinie}
 	\begin{tabular}{|c|K{2.5\tablewidth}|K{2.5\tablewidth}|}
 		\hline \rowcolor{firstcsvrow}
 		Messwert & $I$ in $A$ & $U$ in $V$ \\ \hline
-		\leereZellen{30}{\csvcoli & &}
+		\leereZellen{20}{\csvcoli & &}
 	\end{tabular}
 \end{tabelle}
 Zusätzliche Bemerkungen:
-\linie{2}
+\linie{4}
 
 
 \subsection{Kennlinie und Wirkungsgrad der Brennstoffzellen}
 \label{sub:messprotokoll->brennstoffzelle}
+\vspace{-0.6cm}
 \begin{tabelle}
 	\caption{Nullmessung der Brennstoffzelle}
 	\label{tab:messprotokoll->Brennstoffzelle->Nullmessung}
@@ -59,33 +63,37 @@ Zusätzliche Bemerkungen:
 	\end{tabular}
 \end{tabelle}
 
+\vspace{-0.5cm}
 \begin{tabelle}
 	\caption{Strom-Spannungskennlinie der Brennstoffzelle}
 	\label{tab:messprotokoll->Brennstoffzelle->Kennlinie}
 	\begin{tabular}{|c|K{1.5\tablewidth}|K{1.5\tablewidth}|K{1.5\tablewidth}|K{1.5\tablewidth}|}
 		\hline \rowcolor{firstcsvrow}
 		Messwert & $I$ in $A$ & $R_{Last}$ in $\Omega$ & $U_{ges}$ in $V$ & $U_{uBZ}$ in $V$ \\ \hline
-		\leereZellen{30}{\csvcoli &&&&}
+		\leereZellen{15}{\csvcoli &&&&}
 	\end{tabular}
 \end{tabelle}
 
 
+\vspace{-0.5cm}
 \begin{tabelle}
-	\caption{Strom-Spannungskennlinie der Brennstoffzelle (3-fache Durchführung)}
+	\caption{Faraday-Wirkungsgrad (3-fache Durchführung)}
 	\label{tab:messprotokoll->brennstoffzelle}
-	\begin{tabular}{|K{\tablewidth}|K{\tablewidth}|l|K{\tablewidth}|K{\tablewidth}|r|K{\tablewidth}|K{\tablewidth}|}
-		\cline {1-2}\cline {4-5}\cline {7-8}
-		\multicolumn{2}{|c|}{\cellcolor{firstcsvrow} Messung 1} &~~~~~~& \multicolumn{2}{|c|}{\cellcolor{firstcsvrow} Messung 2} &~~~~~~& \multicolumn{2}{|c|}{\cellcolor{firstcsvrow} Messung 2} \\
-		\cline {1-2}\cline {4-5}\cline {7-8}
-		\cellcolor{secondcsvrow} $I$ in $A$ & \cellcolor{secondcsvrow} $U$ in $V$ &  &\cellcolor{secondcsvrow} $I$ in $A$ & \cellcolor{secondcsvrow} $U$ in $V$ &  & \cellcolor{secondcsvrow} $I$ in $A$ & \cellcolor{secondcsvrow} $U$ in $V$ \\
-		\cline {1-2}\cline {4-5}\cline {7-8}
-		\csvreader[separator=semicolon, late after line=\\\cline {1-2}\cline {4-5}\cline {7-8}, filter test=\ifnumless{\csvcoli}{44}]{./tables/hundert.csv}{}
-			{& &  & & &  & &}
+	\begin{tabular}{|c|K{0.88\tablewidth}|K{0.80\tablewidth}|K{0.80\tablewidth}||K{0.88\tablewidth}|K{0.80\tablewidth}|K{0.80\tablewidth}||K{0.88\tablewidth}|K{0.80\tablewidth}|K{0.80\tablewidth}|}
+		\hline \rowcolor{firstcsvrow}
+		$t$ in $s$ & \multicolumn{3}{|c|}{Messung 1} & \multicolumn{3}{|c|}{Messung 2} & \multicolumn{3}{|c|}{Messung 3} \\
+		\hline \rowcolor{secondcsvrow}
+		& $V$ in $ml$ & $I$ in $A$ & $U$ in $V$ & $V$ in $ml$ & $I$ in $A$ & $U$ in $V$ & $V$ in $ml$ & $I$ in $A$ & $U$ in $V$ \\ \hline
+		
+		\leereZellen{5}{& & & & & & & & &}
 	\end{tabular}
 \end{tabelle}
 Zusätzliche Bemerkungen:
-\linie{2}
+\linie{4}
 
+
+\newpage
+\kariert{47}
 
 \newpage
 \kariert{47}
